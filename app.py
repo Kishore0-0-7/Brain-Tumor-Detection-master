@@ -294,7 +294,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center'>
-        <p>Developed with ❤️ for medical imaging analysis | Last updated: February 2024</p>
+        <p>Developed by The Care Crew for medical imaging analysis </p>
     </div>
     """,
     unsafe_allow_html=True
