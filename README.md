@@ -1,21 +1,73 @@
-# Brain Tumor Detection
+# Brain Tumor Detection System
 
-A brain tumor is an abnormal growth of tissue in the brain or central spine that can disrupt proper brain function. It is the abnormal growth of tissues in brain. If the tumor originates in the brain, it is called a primary brain tumor. Primary brain tumors can be benign or malignant. Benign brain tumors are not cancerous.
+This advanced brain tumor detection system utilizes deep learning technology to analyze MRI scans and identify potential tumors. The system provides both detection and visualization capabilities to assist in the analysis of brain MRI scans.
 
+## Features
 
-## Requirements
+- 🔍 **Tumor Detection**: Analyzes MRI scans using a deep learning model.
+- 🎯 **Region Visualization**: Highlights potential tumor regions.
+- 📊 **Analysis History**: Tracks and visualizes detection history.
+- 📈 **Detailed Metrics**: Provides confidence scores and image properties.
 
-opencv
+## How It Works
 
-tensorflow
+1. Upload an MRI scan image.
+2. The system processes the image using advanced computer vision techniques.
+3. A deep learning model analyzes the processed image.
+4. Results are displayed with confidence scores and visualizations.
 
-## Tumor Detection
-The GUI can be used to detect and view the tumor region.
+## Best Practices
 
-The tensorflow model can be used to detect if the MRI image contains tumor or not.
+- Use clear, high-quality MRI scans.
+- Ensure images are properly oriented.
+- Use standard medical imaging formats.
+- Regular system calibration and validation.
 
-![alt text](tumordetection.jpg)
+## Technical Details
 
-The tumor region can be viewed using Image processing methods applied through opencv. Image segmentation using marker-based watershed segmentation algorithm is used to view the tumor region. A watershed is a transformation defined on a grayscale image. We label the region which we are sure of being the foreground or object with one color(or intensity), and label the region which we are sure of being background or non-object with another color and finally the region which we are not sure of anything, we label it with 0. That is our marker. Then apply watershed algorithm. Then our marker will be updated with the labels we gave, and the boundaries of objects will have a value of -1.
+- **Model**: Custom CNN architecture.
+- **Image Processing**: OpenCV.
+- **Visualization**: Plotly & Streamlit.
+- **Data Analysis**: Pandas & NumPy.
 
-![alt text](viewtumor.jpg)
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Brain-Tumor-Detection.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Brain-Tumor-Detection
+   ```
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Ensure the model file `brain_tumor_detector.h5` is in the project directory.
+2. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+3. Open your web browser and go to `http://localhost:8501`.
+
+## System Information
+
+- **Python Version**: 3.8+
+- **TensorFlow Version**: 2.15.0
+- **OpenCV Version**: 4.9.0
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Developed by The Care Crew for medical imaging analysis.
